@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 4</title>
+    <style>
+        #effect {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .highlight {
+            background-color: red;
+            width: 200px !important;
+        }
+
+        .shrink {
+            background-color: gray;
+            width: 50px !important;
+        }
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+        .trueClass {
+            background-color: green;
+        }
+        .falseClass {
+            background-color: red;
+        }
+        .progress-bar {
+            height: 50px;
+            background-color: tomato;
+            max-width: 100vw;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="exercise">
+        <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+        <div>
+          <button @click="startEffect">Start Effect</button>
+          <div id="effect" :class="effect ? 'highlight' : 'shrink'"></div>
+        </div>
+        <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
+        <div :class="[var1, var2]">I got no class :(</div>
+        <!-- 3) Let the user enter a class (create some example classes) and attach it -->
+        <div>
+          <input type="text" v-model="userClass">
+          <div :class="userClass">I am {{userClass}} color</div>
+        </div>
+        <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
+        <div>
+          <input type="text" v-model="userClass2">
+          <input type="text" v-model="trueOrFalse">
+          <div :class="[userClass2, trueOrFalse === 'true' ? 'trueClass' : '', trueOrFalse === 'false' ? 'falseClass' : '']"></div>
+        </div>
+        <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
+        <div>
+          <input type="text" v-model="color">
+          <div :style="{color: color}">Hello</div>
+        </div>
+        <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
+        <div>
+          <button @click="startProgress">Start Progress</button>
+          <div class="progress-bar" :style="{width: width + 'vw'}">{{width}}</div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#exercise',
+            data: {
+                effect: false,
+                var1: 'class1',
+                var2: 'class2',
+                userClass: '',
+                userClass2: '',
+                trueOrFalse: '',
+                color: '',
+                width: 0,
+                ticker: null,
+            },
+            methods: {
+                startEffect() {
+                    setInterval(() => this.effect = !this.effect, 1000);
+                },
+                startProgress() {
+                    this.ticker = setInterval(this.tickProgress, 1000);
+                },
+                stopProgress() {
+                    clearInterval(this.ticker);
+                },
+                tickProgress() {
+                    this.width += 10;
+                    if (this.width >= 100) {
+                        this.stopProgress();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
