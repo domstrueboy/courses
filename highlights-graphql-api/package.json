@@ -1,0 +1,22 @@
+{
+  "name": "highlights-graphql-api",
+  "version": "1.0.0",
+  "description": "Just training project by an article from internet",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "graphql",
+    "nodejs"
+  ],
+  "author": "Pavel Bobylyev",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.11.0",
+    "graphql": "^14.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
