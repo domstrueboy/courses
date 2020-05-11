@@ -1,0 +1,36 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+
+1.     returns resource usage measures for who, which can be one of the following:
+       RUSAGE_SELF (actually used in our program - return resource usage statistics for the calling process, which is the sum of
+       resources used by all threads in the process),
+       RUSAGE_CHILDREN,
+       RUSAGE_THREAD (since Linux 2.6.26).
+              
+2.  16 members
+
+3.  maybe it's faster?
+
+4.     On the first iteration of the loop "for" the variable "c" is initialized to the value returned by the function fgetc(fp),
+       i.e., receives 1 byte (character) from the data stream (in our case - file). Until reach the end of file (EOF) function
+       "fgetc" is called again on each iteration in order to read the next byte. At each iteration, the received symbol is checked.
+       If it is alphabetic, it is written in "word[index]" and "index" is incremented by 1. If it is digital, then using run
+       "while" loop called function "fgetc" skip numeric characters. Otherwise, we have found the whole word and is ready to receive
+       the next, i.e. increase the "word" to 1 and reset "index" to 0. The word is checked for in the dictionary by the function "check".
+
+5.     The parsing would be more complicated - would have to split the string in characters, to allocate memory for arrays as a buffer
+       and for the results, it is possible to move array items, etc. More difficult to implement timing.
+       
+6.     In order to protect themselves: we pass to the function a pointer to a "word" or "dictionary", so we can accidentally ruin
+       the value from inside the function, because the function "knows" its unique address. If we use "const", then change the value
+       at *word or *dictionary will not work.
+
+7.     I used the data structure "node", which contains one word (of type char) and a link to the next node, which is the same structure.
+       If I may say so, recursively (i.e., this is similar to how the function is called from itself in recursive functions).
+       And also used the hash table. Each bucket in the has table had a linked list of node structs.
+
+8.  The code worked immediately like now.
+
+9.     I think if I do not use the hash table, the time for checking words in the dictionary would increase significantly
+       (as it would be equivalent to linear search)
+
+10. My code is slower than the sample, so, yes, the bottlenecks remain. Don't know where

@@ -1,0 +1,52 @@
+0.  bmp - depending on the bitness, from 1 (2 colors) to 32-bit per pixel format supports 4,294,967,296 distinct colors
+    gif - 256 colors on one frame, but it can be any color that is encoded with 24 bits (2^24 - more than 16 million)
+          that will be stored in the palette file;
+    jpeg - 24 bits colors (2^24 - more than 16 million);
+    png - from 16 (65536 colors) to 48 bit (2,8e14 colors).
+    
+1.  gif
+
+2.  Lossless compression is a kind of "archiving" a file, i.e. the source information remains unchanged,
+    but due to the compression algorithms is smaller.
+    Lossy compression allows to compress the image more efficiently than lossless compression,
+    because in addition to compressive algorithms apply algorithms that reduce the quality of the file
+    (and therefore reducing the size of the information in the file).
+    You need to find a balance between loss of quality (unnoticeable to the eye) and compression.
+    
+3.  jpeg
+
+4.  The reference (pointer, address) of file is cleared from FAT table. The file physically remains on the disk
+    but it cannot be find (without special software), this disk space is considered empty.
+    
+5.  To record something over the deleted files (for example, zeros).
+
+6.  stdint.h — header file of the standard library of the C language. It declares some integer types
+    (with the specified minimum size or the specified fixed size) and macros.
+    
+7.  we can retrieve need pieces of bmp file from memory more easily (by repeating with these types of bmp file structure
+    in our structure), in addition, they are faster and take up less space than a conventional int.
+    
+8.  1 byte (8 bit) unsigned in BYTE, 4 unsigned in DWORD, 4 signed in LONG, 2 unsigned in WORD.
+
+9.  0x42 0x4D in hexadecimal, same as BM in ASCII, 66 77 in dec.
+
+10. bfSize (bitmap file size) - the size, in bytes, of the bitmap file. biSize (bitmap image size) - the size of the actually image.
+    bfSize = biSize + sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) or bfSize = biSize + 54.
+    
+11. For uncompressed RGB bitmaps, if biHeight is negative, the bitmap is a top-down DIB (device-independent bitmap) with the origin
+    at the upper left corner. If biHeight is positive, the bitmap is a bottom-up DIB with the origin at the lower left corner.
+    
+12. biBitCount
+
+13. If the file cannot be opened or if input parameter(s) ("filename" and/or "mode") is NULL or an empty string, NULL is returned.
+    
+14. Because from one file is need to read only one file- and one info- header, and the size of the read block is defined
+    in the structures BITMAPFILEHEADER and BITMAPINFOHEADER in "bmp.h" using the fixed sized BYTE, DWORD, LONG, WORD.
+
+15. 3
+
+16. Moves the file pointer to a specified location. In our case skip over padding, if any.
+
+17. Current position of file pointer.
+
+18. This is the man. I don't know him. Mr.Boddy?

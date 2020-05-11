@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    {% if status %}
+    <p class="alert alert-success">
+        {{status}}
+    </p>
+    {% endif %}
+    
+    <table class="table table-striped">
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>TOTAL</th>
+            </tr>
+        {% for item in own %}
+            <tr>
+                <td>{{item.symbol}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.shares}}</td>
+                <td>${{item.price}}</td>
+                <td>${{ "%.2f" | format(item.shares * item.price) }}</td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>${{ "%.2f" | format(cash) }}</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>${{ "%.2f" | format(total) }}</strong></td>
+            </tr>
+    </table>
+    
+    {% if link %}
+    <a href="/{{link}}">Back to {{link}}</a>
+    {% endif %}
+    
+{% endblock %}

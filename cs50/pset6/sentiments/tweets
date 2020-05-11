@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+import sys
+
+from twython import Twython
+from termcolor import colored
+
+from analyzer import Analyzer
+
+APP_KEY = 'T99QazCax7Q5TLOozNSp4kY2B'
+APP_SECRET = 'uoCjVFu6HKezFCjy5LrySDbIBHBZkJgiE77olQikJVLMYNcAra'
+OAUTH_TOKEN = '476692513-9OdCipLA1xWqHPLdecLb5PczWpdWIACIKkzvvThP'
+OAUTH_TOKEN_SECRET = 'ePWFVsrcqN9r6ofYpwDene72AwaNYp3YW9bcKRHAlrAyr'
+
+twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+
+def main():
+    
+    if len(sys.argv) == 2:
+        if sys.argv[1].isalnum():
+            user = sys.argv[1]
+
+            user_timeline = twitter.get_user_timeline(screen_name=user,count=50)
+            
+            positives = "positive-words.txt"
+            negatives = "negative-words.txt"
+
+            analyzer = Analyzer(positives, negatives)
+        
+            for tweet in user_timeline:
+                
+                score = analyzer.analyze(tweet['text'])
+                
+                if score > 0:
+                    print(colored(str(score) + "\tText: " + tweet['text'], "green"))
+                elif score < 0:
+                    print(colored(str(score) + "\tText: " + tweet['text'], "red"))
+                else:
+                    print(colored(str(score) + "\tText: " + tweet['text'], "yellow"))
+            
+        else:
+            sys.exit("Please enter alphabetic or num symbols as a key next time!")
+    else:
+         sys.exit("Please enter one argument next time!")
+    
+if __name__ == "__main__":
+    main()
+    
+"""pythoncentral"""

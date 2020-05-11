@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p class="well">
+        A share of <strong>{{name}} ({{symbol}})</strong> costs <strong>{{price}}</strong>.
+    </p>
+    <a href="/quote">Back to Quote</a>
+    
+{% endblock %}
