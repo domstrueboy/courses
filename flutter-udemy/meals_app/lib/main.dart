@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './routes.dart';
+import 'pages/tabs_page.dart';
 
-import './pages/categories_page.dart';
+import './routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,6 +32,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: routes,
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => TabsPage());
+      },
     );
   }
 }
