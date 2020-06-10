@@ -4,10 +4,12 @@ import '../models/meal.dart';
 
 import '../components/meal_item.dart';
 
-import '../data/meals_data.dart';
-
 class CategoryMealsPage extends StatefulWidget {
   static final routeName = '/category_meals_page';
+
+  final List<Meal> availableMeals;
+
+  CategoryMealsPage(this.availableMeals);
 
   @override
   _CategoryMealsPageState createState() => _CategoryMealsPageState();
@@ -31,7 +33,7 @@ class _CategoryMealsPageState extends State<CategoryMealsPage> {
       final categoryId = routeArgs['id'];
       categoryTitle = routeArgs['title'];
       categoryMeals =
-          MEALS.where((meal) => meal.categories.contains(categoryId)).toList();
+          widget.availableMeals.where((meal) => meal.categories.contains(categoryId)).toList();
       _loadedInitData = true;
     }
     super.didChangeDependencies();
@@ -58,7 +60,6 @@ class _CategoryMealsPageState extends State<CategoryMealsPage> {
             duration: categoryMeals[index].duration,
             complexity: categoryMeals[index].complexity,
             affordability: categoryMeals[index].affordability,
-            removeItem: _removeMeal,
           );
         },
         itemCount: categoryMeals.length,
