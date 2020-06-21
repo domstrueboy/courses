@@ -14,6 +14,10 @@ class ProductsProvider with ChangeNotifier{
     return _items.where((item) => item.isFavorite).toList();
   }
 
+  int get itemsCount {
+    return _items == null ? 0 : _items.length;
+  }
+
   Product findById(String id) {
     return _items.firstWhere((item) => item.id == id);
   }
