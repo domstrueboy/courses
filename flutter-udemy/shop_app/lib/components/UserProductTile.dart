@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../pages/AddEditProductPage.dart';
+
+import '../providers/ProductsProvider.dart';
 import '../providers/Product.dart';
 
 class UserProductTile extends StatelessWidget {
@@ -20,12 +24,20 @@ class UserProductTile extends StatelessWidget {
           children: [
             IconButton(
               icon: Icon(Icons.edit),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AddEditProductPage.routeName,
+                  arguments: product.id,
+                );
+              },
               color: Theme.of(context).primaryColor,
             ),
             IconButton(
               icon: Icon(Icons.delete),
-              onPressed: () {},
+              onPressed: () {
+                Provider.of<ProductsProvider>(context, listen: false)
+                    .removeProduct(product.id);
+              },
               color: Theme.of(context).errorColor,
             ),
           ],

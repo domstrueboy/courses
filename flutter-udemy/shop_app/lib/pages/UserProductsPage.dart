@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/ProductsProvider.dart';
 
+import '../pages/AddEditProductPage.dart';
 import '../components/UserProductTile.dart';
 import '../components/AppDrawer.dart';
 
@@ -17,7 +18,9 @@ class UserProductsPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AddEditProductPage.routeName);
+            },
           ),
         ],
       ),
