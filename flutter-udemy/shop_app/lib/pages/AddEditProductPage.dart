@@ -86,11 +86,26 @@ class _AddEditProductPageState extends State<AddEditProductPage> {
       _isLoading = true;
     });
     if (_addedEditedProduct.id != null) {
-      Provider.of<ProductsProvider>(context, listen: false)
-          .updateProduct(_addedEditedProduct);
-      setState(() {
-        _isLoading = false;
-      });
+      try {
+        await Provider.of<ProductsProvider>(context, listen: false)
+            .updateProduct(_addedEditedProduct);
+      } catch (error) {
+        showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            title: Text('An error occured!'),
+            content: Text(error.toString()),
+            actions: [
+              FlatButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                },
+              )
+            ],
+          ),
+        );
+      }
     } else {
       try {
         await Provider.of<ProductsProvider>(context, listen: false)
@@ -111,13 +126,12 @@ class _AddEditProductPageState extends State<AddEditProductPage> {
             ],
           ),
         );
-      } finally {
-        setState(() {
-          _isLoading = false;
-        });
-        Navigator.of(context).pop();
       }
     }
+    setState(() {
+      _isLoading = false;
+    });
+    Navigator.of(context).pop();
   }
 
   @override

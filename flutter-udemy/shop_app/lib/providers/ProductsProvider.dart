@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../models/HttpException.dart';
+
 import './Product.dart';
 
 class ProductsProvider with ChangeNotifier {
@@ -82,17 +84,49 @@ class ProductsProvider with ChangeNotifier {
     }
   }
 
-  void updateProduct(Product product) {
+  Future<void> updateProduct(Product product) async {
     final productIndex = _items.indexWhere((item) => item.id == product.id);
     if (productIndex < 0) return;
-    _items[productIndex] = product;
-    notifyListeners();
+    final url =
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${product.id}.json';
+    try {
+      await http.patch(
+        url,
+        body: json.encode(
+          {
+            'title': product.title,
+            'description': product.description,
+            'price': product.price,
+            'imageUrl': product.imageUrl,
+          },
+        ),
+      );
+    } catch (error) {
+      throw error;
+    } finally {
+      _items[productIndex] = product;
+      notifyListeners();
+    }
   }
 
   void removeProduct(String id) {
-    final productIndex = _items.indexWhere((item) => item.id == id);
-    if (productIndex < 0) return;
-    _items.removeAt(productIndex);
+    final existingProductIndex = _items.indexWhere((item) => item.id == id);
+    if (existingProductIndex < 0) return;
+    final url =
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${id}.json';
+    var existingProduct = _items[existingProductIndex];
+    _items.removeAt(existingProductIndex);
     notifyListeners();
+    http.delete(url).then((response) {
+      print(response.statusCode);
+      if (response.statusCode >= 400) {
+        throw HttpException('Could not delete the product');
+      } else {
+        existingProduct = null;
+      }
+    }).catchError((_) {
+      _items.insert(existingProductIndex, existingProduct);
+      notifyListeners();
+    });
   }
 }
