@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import './Product.dart';
-import '../data/products.dart';
 
 class ProductsProvider with ChangeNotifier {
-  List<Product> _items = loadedProducts;
+  List<Product> _items = [];
 
   List<Product> get items {
     return [..._items];
@@ -23,6 +22,32 @@ class ProductsProvider with ChangeNotifier {
 
   Product findById(String id) {
     return _items.firstWhere((item) => item.id == id);
+  }
+
+  Future<void> fetchAndSetProducts() async {
+    final url =
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products.json';
+    try {
+      final response = await http.get(url);
+      final extractedData = json.decode(response.body) as Map<String, dynamic>;
+      final List<Product> loadedProducts = [];
+      extractedData.forEach((productId, productData) {
+        loadedProducts.add(
+          Product(
+            id: productId,
+            title: productData['title'],
+            description: productData['description'],
+            price: productData['price'],
+            imageUrl: productData['imageUrl'],
+            isFavorite: productData['isFavorite'],
+          ),
+        );
+      });
+      _items = loadedProducts;
+      notifyListeners();
+    } catch (error) {
+      throw error;
+    }
   }
 
   Future<void> addProduct(Product product) async {
