@@ -11,6 +11,7 @@ import './pages/CartPage.dart';
 import './pages/OrdersPage.dart';
 import './pages/UserProductsPage.dart';
 import './pages/AddEditProductPage.dart';
+import './pages/AuthPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Lato',
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: ProductsOverviewPage(),
+        home: AuthPage(),
         routes: {
           ProductPage.routeName: (ctx) => ProductPage(),
           CartPage.routeName: (ctx) => CartPage(),
