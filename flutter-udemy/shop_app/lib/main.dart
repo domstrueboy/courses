@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import './providers/Auth.dart';
 import './providers/ProductsProvider.dart';
 import './providers/Cart.dart';
 import './providers/Orders.dart';
 
-import './pages/ProductsOverviewPage.dart';
 import './pages/ProductPage.dart';
 import './pages/CartPage.dart';
 import './pages/OrdersPage.dart';
@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (ctx) => Auth(),
+        ),
         ChangeNotifierProvider(
           create: (ctx) => ProductsProvider(),
         ),
