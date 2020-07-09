@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
-
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
+
+import '../credentials.dart';
 
 import '../models/HttpException.dart';
 
@@ -12,10 +13,23 @@ class Auth with ChangeNotifier {
   DateTime _expireDate;
   String _userId;
 
+  bool get isAuth {
+    return token != null;
+  }
+
+  String get token {
+    if (_expireDate != null &&
+        _expireDate.isAfter(DateTime.now()) &&
+        _token != null) {
+      return _token;
+    }
+    return null;
+  }
+
   Future<void> _authenticate(
       String email, String password, String urlSegment) async {
     final url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=AIzaSyBnQUenlqcaoZ6N3mfdO6vNFMdfbmWwqZo';
+        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=$appKey';
     try {
       final response = await http.post(
         url,
@@ -29,6 +43,16 @@ class Auth with ChangeNotifier {
       if (responseData['error'] != null) {
         throw HttpException(responseData['error']['message']);
       }
+      _token = responseData['idToken'];
+      _userId = responseData['localId'];
+      _expireDate = DateTime.now().add(
+        Duration(
+          seconds: int.parse(
+            responseData['expiresIn'],
+          ),
+        ),
+      );
+      notifyListeners();
     } catch (error) {
       throw error;
     }

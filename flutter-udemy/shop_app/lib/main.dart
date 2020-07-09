@@ -6,6 +6,7 @@ import './providers/ProductsProvider.dart';
 import './providers/Cart.dart';
 import './providers/Orders.dart';
 
+import './pages/ProductsOverviewPage.dart';
 import './pages/ProductPage.dart';
 import './pages/CartPage.dart';
 import './pages/OrdersPage.dart';
@@ -34,22 +35,24 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Orders(),
         ),
       ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.deepOrange,
-          fontFamily: 'Lato',
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+      child: Consumer<Auth>(
+        builder: (ctx, auth, _) => MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.purple,
+            accentColor: Colors.deepOrange,
+            fontFamily: 'Lato',
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          home: auth.isAuth ? ProductsOverviewPage() : AuthPage(),
+          routes: {
+            ProductPage.routeName: (ctx) => ProductPage(),
+            CartPage.routeName: (ctx) => CartPage(),
+            OrdersPage.routeName: (ctx) => OrdersPage(),
+            UserProductsPage.routeName: (ctx) => UserProductsPage(),
+            AddEditProductPage.routeName: (ctx) => AddEditProductPage(),
+          },
         ),
-        home: AuthPage(),
-        routes: {
-          ProductPage.routeName: (ctx) => ProductPage(),
-          CartPage.routeName: (ctx) => CartPage(),
-          OrdersPage.routeName: (ctx) => OrdersPage(),
-          UserProductsPage.routeName: (ctx) => UserProductsPage(),
-          AddEditProductPage.routeName: (ctx) => AddEditProductPage(),
-        },
       ),
     );
   }
