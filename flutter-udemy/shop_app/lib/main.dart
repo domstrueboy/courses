@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Auth(),
         ),
         ChangeNotifierProxyProvider<Auth, ProductsProvider>(
+          create: (ctx) => ProductsProvider('token', []),
           update: (ctx, auth, previousProducts) => ProductsProvider(
             auth.token,
             previousProducts == null ? [] : previousProducts.items,
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
           ),
           home: auth.isAuth ? ProductsOverviewPage() : AuthPage(),
           routes: {
+            ProductsOverviewPage.routeName: (ctx) => ProductsOverviewPage(),
             ProductPage.routeName: (ctx) => ProductPage(),
             CartPage.routeName: (ctx) => CartPage(),
             OrdersPage.routeName: (ctx) => OrdersPage(),

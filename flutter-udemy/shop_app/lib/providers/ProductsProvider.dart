@@ -32,10 +32,11 @@ class ProductsProvider with ChangeNotifier {
 
   Future<void> fetchAndSetProducts() async {
     final url =
-        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products.json';
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products.json?auth=$authToken';
     try {
       final response = await http.get(url);
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
+      if (extractedData == null) return;
       final List<Product> loadedProducts = [];
       extractedData.forEach((productId, productData) {
         loadedProducts.add(
@@ -58,7 +59,7 @@ class ProductsProvider with ChangeNotifier {
 
   Future<void> addProduct(Product product) async {
     final url =
-        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products.json?auth=$authToken';
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products.json';
     try {
       final response = await http.post(
         url,
@@ -92,7 +93,7 @@ class ProductsProvider with ChangeNotifier {
     final productIndex = _items.indexWhere((item) => item.id == product.id);
     if (productIndex < 0) return;
     final url =
-        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${product.id}.json?auth=$authToken';
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${product.id}.json';
     try {
       await http.patch(
         url,
@@ -117,7 +118,7 @@ class ProductsProvider with ChangeNotifier {
     final existingProductIndex = _items.indexWhere((item) => item.id == id);
     if (existingProductIndex < 0) return;
     final url =
-        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${id}.json?auth=$authToken';
+        'https://udemy-flutter-shop-app-8f95d.firebaseio.com/products/${id}.json';
     var existingProduct = _items[existingProductIndex];
     _items.removeAt(existingProductIndex);
     notifyListeners();
