@@ -23,6 +23,24 @@ class ProductsOverviewPage extends StatefulWidget {
 
 class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
   var _showFavoritesOnly = false;
+  var _isInit = true;
+  var _isLoading = false;
+
+  @override
+  void didChangeDependencies() {
+    if (_isInit) {
+      setState(() {
+        _isLoading = true;
+      });
+      Provider.of<ProductsProvider>(context).fetchAndSetProducts().then((_) {
+        setState(() {
+          _isLoading = false;
+        });
+      });
+    }
+    _isInit = false;
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,26 +85,11 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
         ],
       ),
       drawer: AppDrawer(),
-      body: FutureBuilder(
-        builder: (ctx, dataSnapshot) {
-          if (dataSnapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+      body: _isLoading
+          ? Center(
               child: CircularProgressIndicator(),
-            );
-          } else {
-            if (dataSnapshot.error == null) {
-              return Consumer<ProductsProvider>(
-                builder: (ctx, productData, child) =>
-                    ProductsGrid(_showFavoritesOnly),
-              );
-            } else {
-              return Center(
-                child: Text('An error occured!'),
-              );
-            }
-          }
-        },
-      ),
+            )
+          : ProductsGrid(_showFavoritesOnly),
     );
   }
 }
