@@ -13,12 +13,13 @@ class ProductsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productsData = Provider.of<ProductsProvider>(context);
-    final products = showFavorites ? productsData.favoriteItems : productsData.items;
+    final products =
+        showFavorites ? productsData.favoriteItems : productsData.items;
     return GridView.builder(
       padding: EdgeInsets.all(10),
       itemCount: products.length,
       itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
-        value: products[i], 
+        value: products[i],
         child: ProductTile(),
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

@@ -2,7 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/pages/ProductsOverviewPage.dart';
+
+import '../pages/ProductsOverviewPage.dart';
 
 import '../providers/Auth.dart';
 
@@ -50,7 +51,6 @@ class AuthPage extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 8.0, horizontal: 94.0),
                       transform: Matrix4.rotationZ(-8 * pi / 180)
                         ..translate(-10.0),
-                      // ..translate(-10.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.deepOrange.shade900,
@@ -146,7 +146,8 @@ class _AuthCardState extends State<AuthCard> {
           _authData['password'],
         );
       }
-      Navigator.of(context).pushReplacementNamed('/products-overview');
+      Navigator.of(context)
+          .pushReplacementNamed(ProductsOverviewPage.routeName);
     } on HttpException catch (error) {
       var errorMessage = 'Authentication error';
       if (error.toString().contains('EMAIL_EXISTS')) {
