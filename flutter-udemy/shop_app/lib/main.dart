@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<Auth>(
         builder: (ctx, auth, _) => MaterialApp(
-          title: 'Flutter Demo',
+          title: 'My shop',
           theme: ThemeData(
             primarySwatch: Colors.purple,
             accentColor: Colors.deepOrange,
@@ -56,6 +56,7 @@ class MyApp extends StatelessWidget {
           ),
           home: auth.isAuth ? ProductsOverviewPage() : AuthPage(),
           routes: {
+            AuthPage.routeName: (ctx) => AuthPage(),
             ProductsOverviewPage.routeName: (ctx) => ProductsOverviewPage(),
             ProductPage.routeName: (ctx) => ProductPage(),
             CartPage.routeName: (ctx) => CartPage(),
