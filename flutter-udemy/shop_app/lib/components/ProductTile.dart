@@ -3,14 +3,15 @@ import 'package:provider/provider.dart';
 
 import '../providers/Product.dart';
 import '../providers/Cart.dart';
+import '../providers/Auth.dart';
 
 import '../pages/ProductPage.dart';
 
 class ProductTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Consumer2<Product, Cart>(
-      builder: (ctx, product, cart, child) => ClipRRect(
+    return Consumer3<Product, Cart, Auth>(
+      builder: (ctx, product, cart, auth, child) => ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: GridTile(
           child: GestureDetector(
@@ -35,7 +36,7 @@ class ProductTile extends StatelessWidget {
               ),
               color: Theme.of(context).accentColor,
               onPressed: () {
-                product.toggleFavorite();
+                product.toggleFavorite(auth.token);
               },
             ),
             title: Text(
