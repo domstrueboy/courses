@@ -13,6 +13,7 @@ import './pages/OrdersPage.dart';
 import './pages/UserProductsPage.dart';
 import './pages/AddEditProductPage.dart';
 import './pages/AuthPage.dart';
+import './pages/SplashPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,8 +55,17 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Lato',
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: auth.isAuth ? ProductsOverviewPage() : AuthPage(),
+          home: auth.isAuth
+              ? ProductsOverviewPage()
+              : FutureBuilder(
+                  future: auth.tryAutoLogin(),
+                  builder: (ctx, authResultSnap) =>
+                      authResultSnap.connectionState == ConnectionState.waiting
+                          ? SplashPage()
+                          : AuthPage(),
+                ),
           routes: {
+            SplashPage.routeName: (ctx) => SplashPage(),
             AuthPage.routeName: (ctx) => AuthPage(),
             ProductsOverviewPage.routeName: (ctx) => ProductsOverviewPage(),
             ProductPage.routeName: (ctx) => ProductPage(),
