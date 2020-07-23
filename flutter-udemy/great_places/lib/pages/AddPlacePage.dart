@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../components/ImageInput.dart';
+import '../components/LocationInput.dart';
 import '../providers/Places.dart';
 
 class AddPlacePage extends StatefulWidget {
@@ -49,6 +50,8 @@ class _AddPlacePageState extends State<AddPlacePage> {
                       ),
                       SizedBox(height: 10),
                       ImageInput(_selectImage),
+                      SizedBox(height: 10),
+                      LocationInput(),
                     ],
                   ),
                 ),
