@@ -8,22 +8,30 @@ class ChatPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Chat'),
       ),
-      body: ListView.builder(
-        itemCount: 10,
-        itemBuilder: (ctx, i) => Container(
-          padding: EdgeInsets.all(8),
-          child: Text('It works!'),
-        ),
+      body: StreamBuilder(
+        stream: Firestore.instance
+            .collection('chats/TozuwJ9eOXB9HseerWiy/messages')
+            .snapshots(),
+        builder: (ctx, streamSnapshot) {
+          if (streamSnapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          }
+          final documents = streamSnapshot.data.documents;
+          return ListView.builder(
+            itemCount: documents.length,
+            itemBuilder: (ctx, i) => Container(
+              padding: EdgeInsets.all(8),
+              child: Text(documents[i]['text']),
+            ),
+          );
+        },
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
           Firestore.instance
               .collection('chats/TozuwJ9eOXB9HseerWiy/messages')
-              .snapshots()
-              .listen((data) {
-            print(data.documents[0]['text']);
-          });
+              .add({'text': 'New messageeeeee'});
         },
       ),
     );
