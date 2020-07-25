@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 import './pages/AuthPage.dart';
 import './pages/ChatPage.dart';
 
@@ -22,7 +24,13 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
           )),
-      home: AuthPage(),
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.onAuthStateChanged,
+        builder: (ctx, userSnapshot) {
+          if (userSnapshot.hasData) return ChatPage();
+          return AuthPage();
+        },
+      ),
     );
   }
 }

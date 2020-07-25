@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../components/chat/Messages.dart';
+import '../components/chat/NewMessage.dart';
 
 class ChatPage extends StatelessWidget {
   @override
@@ -7,32 +11,43 @@ class ChatPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Chat'),
-      ),
-      body: StreamBuilder(
-        stream: Firestore.instance
-            .collection('chats/TozuwJ9eOXB9HseerWiy/messages')
-            .snapshots(),
-        builder: (ctx, streamSnapshot) {
-          if (streamSnapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
-          final documents = streamSnapshot.data.documents;
-          return ListView.builder(
-            itemCount: documents.length,
-            itemBuilder: (ctx, i) => Container(
-              padding: EdgeInsets.all(8),
-              child: Text(documents[i]['text']),
+        actions: [
+          DropdownButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Theme.of(context).primaryIconTheme.color,
             ),
-          );
-        },
+            items: [
+              DropdownMenuItem(
+                child: Container(
+                  child: Row(
+                    children: [
+                      Icon(Icons.exit_to_app),
+                      SizedBox(width: 12),
+                      Text('Logout'),
+                    ],
+                  ),
+                ),
+                value: 'logout',
+              )
+            ],
+            onChanged: (itemIdentifier) {
+              if (itemIdentifier == 'logout') {
+                FirebaseAuth.instance.signOut();
+              }
+            },
+          )
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          Firestore.instance
-              .collection('chats/TozuwJ9eOXB9HseerWiy/messages')
-              .add({'text': 'New messageeeeee'});
-        },
+      body: Container(
+        child: Column(
+          children: [
+            Expanded(
+              child: Messages(),
+            ),
+            NewMessage(),
+          ],
+        ),
       ),
     );
   }
