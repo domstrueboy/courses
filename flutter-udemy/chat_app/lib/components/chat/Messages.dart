@@ -32,8 +32,9 @@ class Messages extends StatelessWidget {
                 itemCount: messages.length,
                 itemBuilder: (ctx, i) => Message(
                   messages[i]['text'],
-                  messages[i]['userId'] == futureSnapshot.data.uid,
                   messages[i]['username'],
+                  messages[i]['userImage'],
+                  messages[i]['userId'] == futureSnapshot.data.uid,
                   key: ValueKey(messages[i].documentID),
                 ),
               );

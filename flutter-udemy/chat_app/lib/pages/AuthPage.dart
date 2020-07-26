@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 import '../components/auth/AuthForm.dart';
 
@@ -19,6 +21,7 @@ class _AuthPageState extends State<AuthPage> {
     String email,
     String username,
     String password,
+    File image,
     bool isLogin,
     BuildContext ctx,
   ) async {
@@ -37,13 +40,31 @@ class _AuthPageState extends State<AuthPage> {
           email: email,
           password: password,
         );
-        await Firestore.instance
-            .collection('users')
-            .document(authResult.user.uid)
-            .setData({
-          'username': username,
-          'email': email,
-        });
+
+        if (image != null) {
+          final ref = FirebaseStorage.instance
+              .ref()
+              .child('avatars')
+              .child(authResult.user.uid + '.jpg');
+          await ref.putFile(image).onComplete;
+          final url = await ref.getDownloadURL();
+          await Firestore.instance
+              .collection('users')
+              .document(authResult.user.uid)
+              .setData({
+            'username': username,
+            'email': email,
+            'image_url': url,
+          });
+        } else {
+          await Firestore.instance
+              .collection('users')
+              .document(authResult.user.uid)
+              .setData({
+            'username': username,
+            'email': email,
+          });
+        }
       }
     } on PlatformException catch (err) {
       var message = 'An error occured, please check your credentials!';
