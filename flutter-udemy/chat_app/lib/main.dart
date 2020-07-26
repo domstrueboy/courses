@@ -1,8 +1,10 @@
+import 'package:chat_app/pages/SplashPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import './pages/AuthPage.dart';
 import './pages/ChatPage.dart';
+import './pages/SplashPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
       home: StreamBuilder(
         stream: FirebaseAuth.instance.onAuthStateChanged,
         builder: (ctx, userSnapshot) {
+          if (userSnapshot.connectionState == ConnectionState.waiting) {
+            return SplashPage();
+          }
           if (userSnapshot.hasData) return ChatPage();
           return AuthPage();
         },

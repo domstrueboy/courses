@@ -69,6 +69,8 @@ class _AuthFormState extends State<AuthForm> {
                   if (!_isLogin) UserImagePicker(_pickedImage),
                   TextFormField(
                     key: ValueKey('email'),
+                    autocorrect: false,
+                    textCapitalization: TextCapitalization.none,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(labelText: 'Email address'),
                     validator: (value) {
@@ -84,6 +86,9 @@ class _AuthFormState extends State<AuthForm> {
                   if (!_isLogin)
                     TextFormField(
                       key: ValueKey('username'),
+                      autocorrect: false,
+                      textCapitalization: TextCapitalization.words,
+                      enableSuggestions: false,
                       decoration: InputDecoration(labelText: 'Username'),
                       validator: (value) {
                         if (value.isNotEmpty) return null;
