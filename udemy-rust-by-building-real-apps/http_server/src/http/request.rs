@@ -6,6 +6,7 @@ use std::fmt::{ Display, Formatter, Result as FmtResult, Debug };
 use std::str;
 use super::QueryString;
 
+#[derive(Debug)]
 pub struct Request<'buf> {
   method: Method, 
   path: &'buf str,
@@ -74,6 +75,12 @@ impl ParseError {
 impl From<MethodError> for ParseError {
   fn from(_: MethodError) -> Self {
     Self::InvalidMethod
+  }
+}
+
+impl From<Utf8Error> for ParseError {
+  fn from(_: Utf8Error) -> Self {
+    Self::InvalidEncoding
   }
 }
 
