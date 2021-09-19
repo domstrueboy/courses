@@ -6,5 +6,15 @@ fn main() {
     arg_iterator.next();
     let args: String = arg_iterator.collect();
 
-    dbg!(args);
+    let client = reqwest::blocking::Client::new();
+
+    let response = client
+                    .get("https://api.waqi.info/search/")
+                    .query(&[("token", api_token), ("keyword", args)])
+                    .send()
+                    .expect("a successful request")
+                    .json::<serde_json::Value>()
+                    .expect("expected the body to be json");
+
+    dbg!(response);
 }
