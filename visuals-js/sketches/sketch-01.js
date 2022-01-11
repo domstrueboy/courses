@@ -3,7 +3,7 @@ const { degToRad } = require('canvas-sketch-util/math');
 const { range } = require('canvas-sketch-util/random');
 
 const settings = {
-  dimensions: [1000, 1000]
+  dimensions: [ 1080, 1080 ]
 };
 
 const sketch = () => {
