@@ -1,5 +1,6 @@
 use bevy::prelude::*;
 use itertools::Itertools;
+use rand::prelude::*;
 
 mod colors;
 use colors::MATERIALS;
@@ -10,13 +11,54 @@ const TILE_SPACER: f32 = 10.0;
 #[derive(Component)]
 struct Board {
     size: u8,
+    physical_size: f32,
 }
+
+impl Board {
+    fn new(size: u8) -> Self {
+
+        let physical_size = f32::from(size) * TILE_SIZE
+            + f32::from(size + 1) *TILE_SPACER;
+
+        Board {
+            size,
+            physical_size,
+        }
+    }
+
+    fn cell_position_to_physical(&self, pos: u8) -> f32 {
+
+        let offset = -self.physical_size / 2.0 + 0.5 * TILE_SIZE;
+
+        offset
+            + f32::from(pos) * TILE_SIZE
+            + f32::from(pos + 1) * TILE_SPACER
+    }
+}
+
+#[derive(Debug, PartialEq, Component)]
+struct Points {
+    value: u32,
+}
+
+#[derive(Debug, PartialEq, Copy, Clone, Eq, Hash, Component)]
+struct Position {
+    x: u8,
+    y: u8,
+}
+
+#[derive(Component)]
+struct TileText;
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
         .add_startup_system(setup)
         .add_startup_system(spawn_board)
+        .add_startup_system_to_stage(
+            StartupStage::PostStartup,
+            spawn_tyles
+        )
         .run();
 }
 
@@ -28,20 +70,15 @@ fn setup(mut commands: Commands) {
 fn spawn_board(
     mut commands: Commands,
 ) {
-    let board = Board { size: 4 };
-
-    let physical_board_size = f32::from(board.size) * TILE_SIZE
-        + f32::from(board.size + 1) * TILE_SPACER;
-
-    let offset = - physical_board_size / 2.0 + 0.5 * TILE_SIZE;
+    let board = Board::new(4);
 
     commands
         .spawn_bundle(SpriteBundle {
             sprite: Sprite {
                 color: MATERIALS.board,
                 custom_size: Some(Vec2::new(
-                    physical_board_size, 
-                    physical_board_size
+                    board.physical_size, 
+                    board.physical_size,
                 )),
                 ..Sprite::default()
             },
@@ -56,15 +93,13 @@ fn spawn_board(
                         color: MATERIALS.tile_placeholder,
                         custom_size: Some(Vec2::new(
                             TILE_SIZE, 
-                            TILE_SIZE
+                            TILE_SIZE,
                         )),
                         ..Sprite::default()
                     },
                     transform: Transform::from_xyz(
-                        offset + f32::from(tile.0) * TILE_SIZE
-                            + f32::from(tile.0 + 1) * TILE_SPACER,
-                        offset + f32::from(tile.1) * TILE_SIZE
-                            + f32::from(tile.1 + 1) * TILE_SPACER,
+                        board.cell_position_to_physical(tile.0),
+                        board.cell_position_to_physical(tile.1),
                         1.0,
                     ),
                     ..Default::default()
@@ -72,4 +107,59 @@ fn spawn_board(
             }
         })
         .insert(board);
+}
+
+fn spawn_tyles(
+    mut commands: Commands,
+    query_board: Query<&Board>,
+) {
+    let board = query_board
+        .single();
+
+    let mut rng = rand::thread_rng();
+
+    let starting_tiles: Vec<(u8, u8)> = (0..board.size)
+        .cartesian_product(0..board.size)
+        .choose_multiple(&mut rng, 2);
+
+    for (x, y) in starting_tiles.iter() {
+        let pos = Position { x: *x, y: *y };
+        commands
+            .spawn_bundle(SpriteBundle {
+                sprite: Sprite {
+                    color: MATERIALS.tile,
+                    custom_size: Some(Vec2::new(
+                        TILE_SIZE, 
+                        TILE_SIZE,
+                    )),
+                    ..Sprite::default()
+                },
+                transform: Transform::from_xyz(
+                    board.cell_position_to_physical(pos.x),
+                    board.cell_position_to_physical(pos.y),
+                    1.0,
+                ),
+                ..Default::default()
+            })
+            .with_children(|child_builder| {
+                    child_builder.spawn_bundle(Text2dBundle {
+                        text: Text::with_section(
+                            "2", 
+                            TextStyle {
+                                font_size: 40.0,
+                                color: Color::BLACK,
+                                ..Default::default()
+                            },
+                            TextAlignment {
+                                vertical: VerticalAlign::Center,
+                                horizontal: HorizontalAlign::Center,
+                            }),
+                        transform: Transform::from_xyz(0.0, 0.0, 1.0),
+                        ..Default::default()
+                    })
+                    .insert(TileText);
+            })
+            .insert(Points { value: 2 })
+            .insert(pos);
+    }
 }

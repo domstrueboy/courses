@@ -11,3 +11,4 @@ resolver = "2" # Important! wgpu/Bevy needs this!
 [dependencies]
 bevy = "0.6.1"
 itertools = "0.10.2"
+rand = "0.8.5"
