@@ -50,9 +50,28 @@ struct Position {
 #[derive(Component)]
 struct TileText;
 
+struct FontSpec {
+    family: Handle<Font>,
+}
+
+impl FromWorld for FontSpec {
+    fn from_world(world: &mut World) -> Self {
+
+        let asset_server = world
+            .get_resource_mut::<AssetServer>()
+            .unwrap();
+
+        FontSpec {
+            family: asset_server
+                .load("fonts/FiraSans-Bold.ttf"),
+        }
+    }
+}
+
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .init_resource::<FontSpec>()
         .add_startup_system(setup)
         .add_startup_system(spawn_board)
         .add_startup_system_to_stage(
@@ -112,6 +131,7 @@ fn spawn_board(
 fn spawn_tyles(
     mut commands: Commands,
     query_board: Query<&Board>,
+    font_spec: Res<FontSpec>,
 ) {
     let board = query_board
         .single();
@@ -146,6 +166,9 @@ fn spawn_tyles(
                         text: Text::with_section(
                             "2", 
                             TextStyle {
+                                font: font_spec
+                                    .family
+                                    .clone(),
                                 font_size: 40.0,
                                 color: Color::BLACK,
                                 ..Default::default()
