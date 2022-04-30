@@ -93,6 +93,30 @@ impl TryFrom<&KeyCode> for BoardShift {
     }
 }
 
+impl BoardShift {
+    fn sort(&self, a: &Position, b: &Position) -> Ordering {
+        match Ord::cmp(&a.y, &b.y) {
+            Ordering::Equal => Ord::cmp(&a.x, &b.x),
+            ordering => ordering,
+        }
+    }
+
+    fn set_column_position(
+        &self,
+        position: &mut Mut<Position>,
+        index: u8,
+    ) {
+        position.x = index;
+    }
+
+    fn set_row_position(
+        &self,
+        position: &mut Mut<Position>,
+    ) {
+        position.y;
+    }
+}
+
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
