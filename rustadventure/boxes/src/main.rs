@@ -113,7 +113,7 @@ impl BoardShift {
         &self,
         position: &mut Mut<Position>,
     ) {
-        position.y;
+        position.y
     }
 }
 
@@ -267,68 +267,51 @@ fn board_shift(
             |key_code| BoardShift::try_from(key_code).ok(),
         );
 
-    match shift_direction {
-        Some(BoardShift::Left) => {
-            let mut it =
-                tiles
-                    .iter_mut()
-                    .sorted_by(|a, b| {
-                        match Ord::cmp(&a.1.y, &b.1.y) {
-                            Ordering::Equal => {
-                                Ord::cmp(&a.1.x, &b.1.x)
-                            }
-                            ordering => ordering,
-                        }
-                    })
-                    .peekable();
+    if let Some(board_shift) = shift_direction {
+        let mut it =
+            tiles
+                .iter_mut()
+                .sorted_by(|a, b| board_shift.sort(&a.1, &b.1))
+                .peekable();
                 
-                    let mut column: u8 = 0;
+                let mut column: u8 = 0;
 
-                    while let Some(mut tile) = it.next() {
-                        tile.1.x = column;
-                        match it.peek() {
-                            None => {},
-                            Some(tile_next) => {
-                                if tile.1.y != tile_next.1.y {
-                                    // different rows, don't merge
+                while let Some(mut tile) = it.next() {
+
+                    board_shift.set_column_position(
+                        &mut tile.1,
+                        column,
+                    );
+
+                    if let Some(tile_next) = it.peek() {
+
+                        if board_shift.get_row_position(&tile.1) != board_shift.get_row_position(&tile_next.1) {
+                            column = 0;
+                        } else if tile.2.value != tile_next.2.value {
+                            // different values, don't merge
+                            column = column + 1;
+                        } else {
+                            // merge
+                            let real_next_tile = it
+                                .next()
+                                .expect("A peeked tile should always exist when we .next here");
+
+                            tile.2.value = tile.2.value + real_next_tile.2.value;
+
+                            commands
+                                .entity(real_next_tile.0)
+                                .despawn_recursive();
+
+                            if let Some(future) = it.peek() {
+                                if board_shift.get_row_position(&tile.1) != board_shift.get_row_position(&tile_next.1) {
                                     column = 0;
-                                } else if tile.2.value != tile_next.2.value {
-                                    // different values, don't merge
-                                    column = column + 1;
                                 } else {
-                                    // merge
-                                    let real_next_tile = it
-                                        .next()
-                                        .expect("A peeked tile should always exist when we .next here");
-
-                                    tile.2.value = tile.2.value + real_next_tile.2.value;
-
-                                    commands
-                                        .entity(real_next_tile.0)
-                                        .despawn_recursive();
-
-                                    if let Some(future) = it.peek() {
-                                        if tile.1.y != future.1.y {
-                                            column = 0;
-                                        } else {
-                                            column = column + 1;
-                                        }
-                                    }
+                                    column = column + 1;
                                 }
                             }
                         }
                     }
-        }
-        Some(BoardShift::Right) => {
-            dbg!("right");
-        }
-        Some(BoardShift::Up) => {
-            dbg!("up");
-        }
-        Some(BoardShift::Down) => {
-            dbg!("down");
-        }
-        None => (),
+                }
     }
 }
 
