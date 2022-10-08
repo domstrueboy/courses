@@ -42,7 +42,7 @@ pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
                 CalculatorInput::Divide => {
                     stack.push(a / b);
                 },
-                CalculatorInput::Value(val) => {
+                CalculatorInput::Value(_val) => {
                     
                 }
             }
