@@ -1,0 +1,68 @@
+type: output
+custom_name: "Task: Sending Packages"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfIvSlELXSJQk6DvSQaUK+l0cm2ElG4sFBLuuCrC1OqLW0zGUTujv50DLHvofT6DqcFuBlY4qTlidgiq/7Eas0uM=
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 359
+    length: 34
+    placeholder_text: /* Instantiate the package here */
+    initial_state:
+      length: 34
+      offset: 359
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: vu6KTnC1kVTeP9F+CxU+EbNkd90jNFS5HC0735awZxgjVJxM896L6IM/AsQz6odaEZJXbKWtkTRaPF4FfcMKMs/Ptacsjr1tbQKPPdudtiIGWXVwcDx9pi2nhAmxB6Q8jA2LlGgTexcBEXJzj40SOg==
+  - offset: 435
+    length: 21
+    placeholder_text: /* Add return type */
+    initial_state:
+      length: 21
+      offset: 435
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: cIBykhzvWSahGq6AC7El3g==
+  - offset: 466
+    length: 25
+    placeholder_text: /* Something goes here */
+    initial_state:
+      length: 25
+      offset: 466
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 0ixyJj6WppUhCC8sr2RpJuyxUyBfhEGJhz35heqDegRuoVotH3eoWS8bLqZMjN9P1uGQTmvHsPiY+kRKSFZnsQ==
+  - offset: 546
+    length: 21
+    placeholder_text: /* Add return type */
+    initial_state:
+      length: 21
+      offset: 546
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 2NBORuR2M9+V9dBBUHx7yg==
+  - offset: 578
+    length: 25
+    placeholder_text: /* Something goes here */
+    initial_state:
+      length: 25
+      offset: 578
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: krjX16D8qGfFaSxtxDc11GGEdmaQGyuV/GgL4uZQdXM7xwxpCcbVoMZPZvhUacVO
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  encrypted_text: H8MB1PXhLzN5PPQEdXsKPJCyYEEZ/y4FTqAs8ebTJxghptgY4hBrVhvFLcJ/QNC2fVc3F6f1RHcKdlOHb/jTeXNHZbCVxUnD78R9OAssjJxWg13gdsjVPJ7Hi0iSbPxUYKBcoepV/irtZsRNLZ5pbv3OLJ211dW36jZAVtTWCrhNVGA3x19nWjwE7BqTHhQvmxH/JMKxMAJB6Kj7BE4iW92u1/Bi17Ge4E3uIzqWrYA=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Structs+with+Methods+/+Sending+Packages
+status: Unchecked
+record: -1

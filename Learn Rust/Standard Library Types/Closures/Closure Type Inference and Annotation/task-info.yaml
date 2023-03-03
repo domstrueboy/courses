@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfAUAQ6mkrIPAPyOxrhfatOA28YNkTHpD+WE6IalT8yfDFR5JQLhgkck10Q5Lz+QvGzwo28TrswnouVfj47CAae8=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Closures+/+Closure+Type+Inference+and+Annotation
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,44 @@
+type: ide
+custom_name: "Task: Introduce Variable Refactoring"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 36
+    length: 4
+    placeholder_text: 1993
+    initial_state:
+      length: 4
+      offset: 36
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: CGqIo8/awqfbGFrsN/HfJw==
+  - offset: 72
+    length: 4
+    placeholder_text: 1993
+    initial_state:
+      length: 4
+      offset: 72
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: CGqIo8/awqfbGFrsN/HfJw==
+  - offset: 105
+    length: 4
+    placeholder_text: 1993
+    initial_state:
+      length: 4
+      offset: 105
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: CGqIo8/awqfbGFrsN/HfJw==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfCguyvFQBYm8prefsYRVFh6/cTEV96TRkkWo1C4zqj5NtItyC9mLP1C1eMuZg9plNnIUoMnAp3yOwfYCykpG3nk=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Introduce+Variable+Refactoring
+status: Unchecked
+record: -1

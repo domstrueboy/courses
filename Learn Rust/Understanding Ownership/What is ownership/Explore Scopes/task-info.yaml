@@ -1,0 +1,48 @@
+type: output
+custom_name: "Task: Explore Scopes"
+files:
+- name: tests/output.txt
+  visible: false
+  encrypted_text: s5TEiC3wlm0hRqcIM/KqHw==
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 149
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 149
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: n5wLwwE4pqMpD1sapmwZtQ==
+  - offset: 240
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 240
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: F0RVsgbVVr8gmRiE6NkjZA==
+  - offset: 294
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 294
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 2x6UytPusJ7rvdD/9fBekg==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfFMER3iJ6eMtnd9VD/7NY8QdKyRXM5EL9b63Z3dFahP14tT8iedwT7C3Lx6nffMH0Q4rb5MdqzR5ZWVsoezk5pw=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+What+is+ownership+/+Explore+Scopes
+status: Unchecked
+record: -1

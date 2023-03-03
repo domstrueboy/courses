@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: Play with assert_eq!"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfLbspNOlEhuFGgL9sxr9SCL1KzmPLAJjVuB/TzZpUQEnX/PQ+IIntEJy80eqWAeI+HTAZhGp/r1JPVRocykggTgnzcwO0WHcEsJGHufGtV4i3fiwQ0ahxCDNYrdj8BC8QeQmNeAIxW2oYxzSibcwPtSj6j7Gtln5/nvFaGwgm20l
+  learner_created: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 85
+    length: 47
+    placeholder_text: /*insert a correct assertion to pass the task*/
+    initial_state:
+      length: 47
+      offset: 85
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: FiPvI1T+qSajzKDhc4DI3Q==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Writing+Automated+Tests+/+How+to+Write+Tests+/+Assert_Eq
+status: Unchecked
+record: -1

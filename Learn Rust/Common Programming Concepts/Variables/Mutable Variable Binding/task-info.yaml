@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: Mutable Variable Binding"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfK+OYIrqteEe2gpDZ38sIH2udi+Q6uWZkwZnOdAGWuv7ztsPE1bdRqh48VwXygy198ogTysKV7iZU3FufHMFKUs=
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 20
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 20
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: p2QTIZMc8oJ7P6xt+M+WXA==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Mutable+Variable+Binding
+status: Unchecked
+record: -1

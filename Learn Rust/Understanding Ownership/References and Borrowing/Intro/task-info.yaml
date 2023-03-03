@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfOPJ76kD/lGBO0NWhbdBNI44C4GLlKI/kv4Yg4bdh/+uaCcJAn5IIXDGjAncgfVu3Bq+tZ8m5INVpcdb1C9BN1PDnOSb9UjIFVLf+QQTnYHJ
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+References+and+Borrowing+/+Intro
+status: Unchecked
+record: -1
+post_submission_on_open: true

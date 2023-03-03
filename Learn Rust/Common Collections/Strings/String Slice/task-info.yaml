@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: String Slice"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfJqpVfULl1BeRnF3ntJIn60BDWFu5N5ku7/6hkWLRw9WMn4cJrEmH/NDW7ewWnY+YywdctpdjaoIEmvzQOjUAys=
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 106
+    length: 46
+    placeholder_text: /*coerce the String into a string slice here*/
+    initial_state:
+      length: 46
+      offset: 106
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 16uy5iyxwWHSjcn3SkeLYw==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+String+Slice
+status: Unchecked
+record: -1

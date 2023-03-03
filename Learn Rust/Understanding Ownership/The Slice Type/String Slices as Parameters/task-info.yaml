@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfM8d2X00xeL1LyxFI4oi/b6HPN5NbRnpbiDPbeQTGdyW4RajP3+V3n8FTmvYqJ22Bh7gmxQKgvoF/T3PXxl6oEHMrxpZp8ZMAjcufuZ5Yxin
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+The+Slice+Type+/+String+Slices+as+Parameters
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,78 @@
+type: output
+custom_name: "Task: Use Rc"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 1240
+    length: 36
+    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+    initial_state:
+      length: 36
+      offset: 1240
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 1MfOzx4Aj06hZhR9F/rGgg==
+  - offset: 1424
+    length: 36
+    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+    initial_state:
+      length: 36
+      offset: 1424
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 1MfOzx4Aj06hZhR9F/rGgg==
+  - offset: 1610
+    length: 36
+    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+    initial_state:
+      length: 36
+      offset: 1610
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 1MfOzx4Aj06hZhR9F/rGgg==
+  - offset: 2284
+    length: 40
+    placeholder_text: "/* TODO: What else should be dropped? */"
+    initial_state:
+      length: 40
+      offset: 2284
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: tzeLXV+CNK3xPBHGN9mRUQ==
+  - offset: 2408
+    length: 40
+    placeholder_text: "/* TODO: What else should be dropped? */"
+    initial_state:
+      length: 40
+      offset: 2408
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 79ICM3vGHUF6roVDkIKDdg==
+  - offset: 2532
+    length: 40
+    placeholder_text: "/* TODO: What else should be dropped? */"
+    initial_state:
+      length: 40
+      offset: 2532
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: L3Z8XQSJqKeJERDxQ8+0HQ==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfPtHOjFulSxdER8biWzr91vd9mehrXiVNerH23YJk3T8bQYdVTVhIGgt6nnKwU9k2Q==
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  encrypted_text: KaEVSqOmVPrftgjfj12G6v5DH5vU55vE/AnrL4rZrMMBI5HF1XMHtGNF4F3Xk7gfkSOAb07nJ9kIxXGT7Bbp2v+JfIxjRULM2ld/mB5yGJKureo0FKMtE/xmqRyIs1XWJ2WQqeiDim6aEHiAoHE+ljtl6nIadpEeWBI74ccfOE2q13Fs7wIJWE9cJUP8oKuEV5HGssLqw708XBgjLkMTcNL9GCJViJD+njleTdrv0YCA7A23jXpxFpFZ1ylX2mfM2zQvtsIOgPm7N9MwV5Vsdy+N/evxrnMYJE29vJ2JjTolCo2Gfo72qUhpe0AP6yQyZXwgzBWxmn8m6y9Mqakn8dhQdwGN00UY78SicncI6pB2GV+OImgfQFGNxTU89jZYnuUAyiL/eMf+n8/9ahnsX0qQGmDjLvLjPhRSFHIIHWi1ISsLVQM1OIlwztnX6qUHoL84QJDVvRG4ounIq2COfJ6dLAAR7gVbyBho7h4HUvV0sTPzBR4hbtADZtb13txQYk+dnOTbWOzzPXQRXcIy0cNGjxmep3E1kwX9XKlegqeghrKCJoJdnUR1eHqq6UfsRmx3QJkd5gaygXiylI4iikAlMXOw/vIIFaddh7L5KxpimlS8OOyMKWlwwhHnPKeLX3K+dpdCOCSS/1TrCSRtATv7Z7iGosm7hCW0dzbhRyU=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Use+Rc
+status: Unchecked
+record: -1

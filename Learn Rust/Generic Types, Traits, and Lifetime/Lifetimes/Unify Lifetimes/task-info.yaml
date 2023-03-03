@@ -1,0 +1,38 @@
+type: output
+custom_name: "Task: Unify Lifetimes"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 208
+    length: 26
+    placeholder_text: /* Something could here */
+    initial_state:
+      length: 26
+      offset: 208
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: pEKExvH7khitfBaujtH8UA==
+  - offset: 249
+    length: 4
+    placeholder_text: 'let '
+    initial_state:
+      length: 4
+      offset: 249
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ft3/KDXagmI+TWDbl9vbuw==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfH3zAww45SS1FuG3Cm9aMaLq8uj9/VSs4kTYy6tw9isvkfJZBNsQ218HenW5U/2JMX6Symk9AKzv+peqSzm3QE8=
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  encrypted_text: 9cCk70LY3Wxz/JYu8yCIRSj3OfX6zmVLcZw85ZQduWFskc2kgAz6jBfngTxPbfDj
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Generic+Types+Traits+and+Lifetime+/+Lifetimes+/+Unify+Lifetimes
+status: Unchecked
+record: -1

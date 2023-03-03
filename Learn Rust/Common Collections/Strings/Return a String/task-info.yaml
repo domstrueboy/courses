@@ -1,0 +1,37 @@
+type: edu
+custom_name: "Task: Return a String"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfBFXndzRlPXQMju03AJbJlvrAfgfnaPL0jx1Yy/pIWaaHoFr2hMPhMh8t7jYPky9UlHoKmI3Oq2Q97vXRKKh6R8=
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 163
+    length: 19
+    placeholder_text: /* something here*/
+    initial_state:
+      length: 19
+      offset: 163
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: XTss5oK3Vvu4Kiq4Z0j2qw==
+  - offset: 188
+    length: 26
+    placeholder_text: /*and the last part here*/
+    initial_state:
+      length: 26
+      offset: 188
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 3XQ+R2u5I4DrKZGYa+tM/w==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+Return+a+String
+status: Unchecked
+record: -1

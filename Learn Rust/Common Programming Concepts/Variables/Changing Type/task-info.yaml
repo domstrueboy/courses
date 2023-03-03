@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: Changing Type"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 117
+    length: 29
+    placeholder_text: /* Something missing here! */
+    initial_state:
+      length: 29
+      offset: 117
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 0iV8NCCPfPrcuz8qxwUXSg==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfN/dvcvg2jLzY8T+do842X6vYhMvUV0yF/LKpL90N4PytbJF/8ShFKjDKT9mNKVn9QbtnfAPZICwiHo9dQ6apUM=
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Changing+Type
+status: Unchecked
+record: -1

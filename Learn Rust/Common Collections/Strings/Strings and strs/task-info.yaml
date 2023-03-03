@@ -1,0 +1,117 @@
+type: edu
+custom_name: "Task: Strings and &strs"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfGlLq9z478YhHkY/IS7XcehQpPj+BQW+aThIP4LpflYcV+dPyYWf1ywoQZeAircCUeFwM5G3SLWjTfjdBrrFXudahqIi6EedMhj05H0af7J2Idx8UBeb/s7kr1LURJ2IXg==
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 118
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 118
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: GZ4Z3FxiBBNG8s/Xz6TKRQ==
+  - offset: 136
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 136
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  - offset: 165
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 165
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  - offset: 195
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 195
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  - offset: 232
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 232
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: GZ4Z3FxiBBNG8s/Xz6TKRQ==
+  - offset: 265
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 265
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  - offset: 315
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 315
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: GZ4Z3FxiBBNG8s/Xz6TKRQ==
+  - offset: 353
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 353
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: GZ4Z3FxiBBNG8s/Xz6TKRQ==
+  - offset: 388
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 388
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  - offset: 450
+    length: 4
+    placeholder_text: TODO
+    initial_state:
+      length: 4
+      offset: 450
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 9UEmKhN43UGHEegW1VGuFA==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+Strings+and+strs
+status: Unchecked
+record: -1

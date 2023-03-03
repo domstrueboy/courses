@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfNvZFKqSTRdRJ/nVEhXHV49wf3eq8WoG3qpH07sxCP2k7ziNA35dKifpj/3Slq4iOA==
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Vectors+/+Using+an+Enum+to+Store+Multiple+Types
+status: Unchecked
+record: -1
+post_submission_on_open: true

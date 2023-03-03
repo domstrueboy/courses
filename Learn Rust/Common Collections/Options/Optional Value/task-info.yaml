@@ -1,0 +1,41 @@
+type: edu
+custom_name: "Task: Options in pattern matching"
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 174
+    length: 22
+    placeholder_text: word = optional_target
+    initial_state:
+      length: 22
+      offset: 174
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: D8PFuXPFKSB4wapbzTcwbzVCCQca29ue+0nS7HHCQAIWPGW4qXp+Ij3RLhjJUVN5
+  - offset: 609
+    length: 33
+    placeholder_text: integer = optional_integers.pop()
+    initial_state:
+      length: 33
+      offset: 609
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: qxLU1QW19M80ZQVU7I7crJsqqYV/Yy1r0dfQKT3D1KOyXkN7oRjIcptqVR6QBaC3NcZElGv30+X3yUN12F+aDw==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfEkteyBoGfxy4JGdPv1xf7QpkQKXPkRYMz0AgabVBKpWSgqij2np0YeoNmAv1hZAEIIIEZnxMTh2/GoaHosVc/8=
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+- name: runConfigurations/Test.run.xml
+  visible: false
+  encrypted_text: fmEMHFXaNplPF2Xi1hyV5SGBK7G8vy9k63SWfsVwUJMQ5eu5ntx6YO2J6EKbd2aOsC+rDp8yl1r5GKJO78pxp2eMusvGktI2b7yoGew0/d2A8s8QMQBiht14PmbMsudcLI20E9xSxnbezkv2ybSpMz68MpMlsiq7dVph1nHqfjEmqZQ0NJ/5ZZkoaZZYmpedkxLFC1uh8rXf5tshnJxUG1Utn+NKq5ConCtQcRjG+VWBa3lGh4aHbSJg7IuKI7wIui6io+GRPx6eqjwXni6KwaY0E+AKu05zwYaiEpl7ZCeFXtdnn/th3gqHzoFhjuzFQRFwNQSy/0SROFUMLx2ozv0kMDP7iXPkqB75nsqjKkzd3h09NMb/wIiExXTABgsadv3jNVYdp7m7jQlQ0r3ouN3YeGRB9ZgE7sQxUFd+vwi9pK8batv0jJ1D1lYqvzPkFeRdTmU6MnLFUFZnNDphNDBm/Z3sSwLz7eW45f4ks5XGubv75Injmi/2S9aJxV6hfvWr/DmkdO0BNVBWS15W8g+dAyKCJx5HwvLxLNCrMMFA3w6r1Cb2mZwqhPA/7laq8RkZyIdKxmK8Z5wv+8c8L/anyedNrHxbaXjkffg0AGRRYWKIUg/ZumQeWltXdMHYYYzVwEvxP2xqS6jV4HNil1mzpPyIKG9TttJ8WyR6DniShexFznH/sdcnjrrrCsikX3mlO5bCl1Bwln/AFEPCdrjNkZC+YStVV2DlafbFmcvRIWpKdo+QL27Z6cL42tTPLRGj+QPaRgEjWv5X4Jd5Ghq1iwoLyYr1GZHvl2nj0w2StJ+HnA9cycsWJ4Nzv+NvKNaKq4QQ+uiylFgQ/zn9XgfZ0WWV2uu9M+/Fpd7d/NhNW/guLGeQrTT8JPEB7NktI2qkQAxh8xhocPJzrL+wimL9tet+N1+QUMYtyFZyX6RPY5Y7IfC9nEgpKmt3ynPVmLQjClDNpZv8sVzZz8O28h+q/066vAfGY978da4OU0iHnOjjRUmrwDjfScYBPnoYQnebiB8xlNuaoT3w4AG8ubYkEGJaOLqwlXi8VJ6NsKB4h2ni4LsnJZCcG+2V+VtjLNCbV6IUuLjc5BHx6dLRyeB+JGixPdy+Ep7bQTKJ1RTHW9QgZq590zIh9GG17rTGUbb3NXheKjFRarrshIPu22AfEAh7bYYQe/aj65ajFyE=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Options+/+Optional+Value
+status: Unchecked
+record: -1

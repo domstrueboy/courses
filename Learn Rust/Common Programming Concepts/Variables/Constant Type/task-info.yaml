@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: Constant Type"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 12
+    length: 41
+    placeholder_text: /* Something wrong with this constant! */
+    initial_state:
+      length: 41
+      offset: 12
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: LG35Bvni2Yh7mxyjbIMzKg==
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfB3V9m7vWq1ULEcYpEDqjlx8fsfu+SLck6JJuKCI85t/UKV9g/6wE7evkjeCNOTFs8MqJwDiXjbWDRcws/i8+HI=
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Constant+Type
+status: Unchecked
+record: -1

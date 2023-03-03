@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfEi86PWtfqW2Fzq1ImMSV03zo6vVmlTtjM3CMlqojIO7z1PS/xiEZclbJ8MtZk68Wp7bykS0uXjMlbnyfs7szkg=
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Generic+Types+Traits+and+Lifetime+/+Traits+/+Traits+as+Parameters
+status: Unchecked
+record: -1
+post_submission_on_open: true

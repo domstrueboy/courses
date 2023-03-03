@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Task: Return Type"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfMNchXbL4D9QKiNQp+cOkuV+i83N5/3dO1u/krUyeGPzh2y3LOpZOykujf1IQ/igjj6airBjsxv72w0FEBP5tdI=
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 140
+    length: 19
+    placeholder_text: /*put a type here*/
+    initial_state:
+      length: 19
+      offset: 140
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 2NBORuR2M9+V9dBBUHx7yg==
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Functions+/+Return+Type
+status: Unchecked
+record: -1

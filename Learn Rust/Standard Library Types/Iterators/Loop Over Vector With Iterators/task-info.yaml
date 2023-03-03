@@ -1,0 +1,31 @@
+type: edu
+custom_name: "Task: Loop Over Vector with Iterators"
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfM9pg3NW74rMXQsYPJhbOb9+f58o3rbmWoMDyZ+3h0jRw+xx+2ZVqHJqLJGEun5YJU2wuxfasPI2BdrqQofVGUiuwvOSMSw2WRwSJ2u0zPEx
+  learner_created: false
+- name: tests/tests.rs
+  visible: false
+  learner_created: false
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 76
+    length: 79
+    placeholder_text: "// TODO: Complete the function to multiply all the elements\
+      \ in the given vector"
+    initial_state:
+      length: 79
+      offset: 76
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: e09L+ZGuoEenl7oWl+ZD/Q==
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+/+Loop+Over+Vector+With+Iterators
+status: Unchecked
+record: -1

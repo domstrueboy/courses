@@ -1,0 +1,17 @@
+type: theory
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfAS+bvcF2HYRTjEgaHOcpgDPpTGzH78NRHVhJ7ayTjwbvogS4K8mwBbrnajZGaeVdJYBWnuW5MuYk/NMXXutpEZ9jfF21CU6zBwpjVsoBf3d
+  learner_created: false
+- name: src/lib.rs
+  visible: true
+  learner_created: false
+- name: runConfigurations/Build.run.xml
+  visible: false
+  encrypted_text: fmEMHFXaNplPF2Xi1hyV5SGBK7G8vy9k63SWfsVwUJMQ5eu5ntx6YO2J6EKbd2aOsC+rDp8yl1r5GKJO78pxp2eMusvGktI2b7yoGew0/d1DHqZSF/hz17kolg92FW49zCq76XCX3kUPpZPHY/ACxtIjAnYOfiQ18fIMkzUo6dee61aWzSlnoFFIOkTdi2FeA2yFIpCJ21qO1hlbHUgjyCcw3hObu13xHSaLduuIToS39iPcsG9HrV2AsPQaEeMLc2/8/Y6MlQLNtrQNIehKKH9na0C4JwedEg41UwwPIrR223nlIib+Y8Yk6T4+2h7GkuKIGpaBt/woa68rRe/epkotlJOl9YgPkp/7Ef5boFAxzu9Fbi4uVlEyHGVRRh+o8dckYkgRFEgU8RDa84UL9DqCK2psspiRR3iOzDUBcS/6UqbkKu+GPNK+WbDyPKtZbqds+wCN1l2qVU3I57nPxAv7Ggk96eLZoziwWmMexBSMklt7E/H6x+8cqnDFTNMytGnuY7N0SL2Sd8/GrIjHreJyjEAZZusem0wqibqL8NznzJsoKqmZ3KIsSU86aLoAB9VZplfKarFVp4jjjYs9tGDmkmu+jOAE3QeYcX5SCyQkXBk0Bmc+fyHWCGDhxyYGcWenkyu4E/AX98JsXt9S5gC4B4tQCmSJpAmSIwZ574I/ybdiuuMjfMQFr2CXTMto/7vUIgv5vpNge90/ZSOBrc9DZkIriHM63YUzQoCuV0X7ROy2pBa7+vTeRB74+AZ5DBjMt9t2v0/539VGu/gx//DOuIBJgxhpnh3tZ0lQvRw3HsKUcwg6whDAJEBBX+APZeGvASsF73P7LeUqHEE7zFoT/tuLg+5ElS4kWAQhgOhUslJbCovfw62+d/KMVbvzq+8kZk+Ue1YhDP6tsOu49vxlo2HW5uQH2738uAv8Pry+4tt7ctVwR/EDqt9GK1cz0XCeHUxGlrUEuxP2OWLb1Cp+fpGW5mXHzZrUV5nV4/V/qpY02CZZlWZ8Mv/YnMPhwX1neSHeXVoiM6QvSebsrzROJ+E8hCzGtLIp8LFnhcRcc8d+jTLDH3r/a3QQfia0y4464CE08bUXpHdUFdPkOnOrnWWR/BprE7ZHuxghWuve/VYHSquK38/hrQLcfviFo/HLq4rRbvaI21DIYL7uNN8FksPuz4jKy7q+7v5rhRzOva2vbMfP5fjhYM/yY+KhNnc0BO+9JfYUuy5xGveNxQ==
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Making+Structs+and+Enums+Public
+status: Unchecked
+record: -1
+post_submission_on_open: true

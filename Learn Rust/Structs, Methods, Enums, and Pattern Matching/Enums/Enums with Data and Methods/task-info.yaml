@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfJDWoWGGt2banMo5Kpy0WOFXsKKBN01Lccm3pdfqFrHChxKeT/vAU1s3O6KP0Al53UXiZX3EBwuqh6I2PAbGn9O4XnsKcvMixgywHS/Gk7AX
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Enums+/+Enums+with+Data+and+Methods
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfIsZbmYk2+PJ7935ddr7Xvp8xUdCz1L4Q+ZKRY+DsmIIZRMbB3R3FaVGTwjf63q3/emVocSnnsnN8mSVkzA3ZvftC+3UGFiLzxaDcFwD7TKl
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Fearless+Concurrency+/+Shared-State+Concurrency+/+Multiple+Ownership+with+Multiple+Threads
+status: Unchecked
+record: -1
+post_submission_on_open: true
