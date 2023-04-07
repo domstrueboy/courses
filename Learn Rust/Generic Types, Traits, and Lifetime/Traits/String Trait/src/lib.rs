@@ -5,6 +5,3 @@ pub trait AppendBar {
 impl AppendBar for String {
     /* Add your code here */
 }
-
-
-

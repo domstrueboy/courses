@@ -6,5 +6,4 @@ fn main() {
     v.push(6); // ERROR!!!
 
     println!("The first element is: {}", first);
-
 }

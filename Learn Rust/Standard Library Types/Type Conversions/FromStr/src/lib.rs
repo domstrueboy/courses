@@ -29,9 +29,7 @@ impl From<ParseIntError> for ParsePersonError {
 impl FromStr for Person {
     type Err = ParsePersonError;
     fn from_str(s: &str) -> Result<Person, Self::Err> {
-        if s.len() == 0 {
-            /* Return am appropriate error */
-        }
+        if s.len() == 0 { /* Return am appropriate error */ }
         let parts: Vec<&str> = s.split(',').collect();
         /* Add a condition for the cases when there is a wrong number of fields and return an appropriate error */
         /* Extract the first element from the split operation and use it as the name. Return an appropriate error if the field is empty. */

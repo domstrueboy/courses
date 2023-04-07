@@ -1,7 +1,7 @@
 use crate::lamp::Lamp;
 
 pub struct Switcher<'a> {
-    lamp: &'a mut Lamp
+    lamp: &'a mut Lamp,
 }
 
 impl<'a> Switcher<'a> {

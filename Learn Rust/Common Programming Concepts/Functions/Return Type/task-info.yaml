@@ -9,19 +9,22 @@ files:
   visible: true
   placeholders:
   - offset: 140
-    length: 19
+    length: 3
     placeholder_text: /*put a type here*/
     initial_state:
       length: 19
       offset: 140
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 2NBORuR2M9+V9dBBUHx7yg==
   learner_created: false
 - name: tests/tests.rs
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Functions+/+Return+Type
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 14:39:12 UTC"
 record: -1

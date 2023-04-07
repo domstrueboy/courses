@@ -15,17 +15,17 @@ fn good_input() {
 #[test]
 fn missing_age() {
     assert!(matches!(
-            "John,".parse::<Person>(),
-            Err(ParsePersonError::ParseInt(_))
-        ));
+        "John,".parse::<Person>(),
+        Err(ParsePersonError::ParseInt(_))
+    ));
 }
 
 #[test]
 fn invalid_age() {
     assert!(matches!(
-            "John,twenty".parse::<Person>(),
-            Err(ParsePersonError::ParseInt(_))
-        ));
+        "John,twenty".parse::<Person>(),
+        Err(ParsePersonError::ParseInt(_))
+    ));
 }
 
 #[test]
@@ -41,17 +41,17 @@ fn missing_name() {
 #[test]
 fn missing_name_and_age() {
     assert!(matches!(
-            ",".parse::<Person>(),
-            Err(ParsePersonError::NoName)
-        ));
+        ",".parse::<Person>(),
+        Err(ParsePersonError::NoName)
+    ));
 }
 
 #[test]
 fn missing_name_and_invalid_age() {
     assert!(matches!(
-            ",one".parse::<Person>(),
-            Err(ParsePersonError::NoName)
-        ));
+        ",one".parse::<Person>(),
+        Err(ParsePersonError::NoName)
+    ));
 }
 
 #[test]

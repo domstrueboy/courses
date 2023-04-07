@@ -1,9 +1,11 @@
 fn main() {
-    for number in 1..5 { // 5 is excluded
+    for number in 1..5 {
+        // 5 is excluded
         println!("{}", number);
     }
 
-    for number in 1..=5 { // 5 is included (note '=')
+    for number in 1..=5 {
+        // 5 is included (note '=')
         println!("{}", number);
     }
 

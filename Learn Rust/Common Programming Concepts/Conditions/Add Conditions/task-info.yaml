@@ -4,35 +4,35 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 96
-    length: 25
+  - offset: 95
+    length: 21
     placeholder_text: /* Something goes here */
     initial_state:
       length: 25
       offset: 96
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: /woAluQ8/g4A/EeI65UruezyPQKTHY6lCCJJJhmsYtA=
-  - offset: 132
-    length: 25
+  - offset: 119
+    length: 13
     placeholder_text: /* Something goes here */
     initial_state:
       length: 25
       offset: 132
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: w/IJOa/X0wTeRQDPu82lig==
-  - offset: 164
-    length: 25
+  - offset: 127
+    length: 38
     placeholder_text: /* Something goes here */
     initial_state:
       length: 25
       offset: 164
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: uIOVN3BKcAggn5BPywCqjtUuenYsPTzx5Y6Fh1SJ5YA=
   learner_created: false
 - name: src/main.rs
@@ -46,5 +46,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Conditions+/+Add+Conditions
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 10 Mar 2023 19:32:23 UTC"
 record: -1

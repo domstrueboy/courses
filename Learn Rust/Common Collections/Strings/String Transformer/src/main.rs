@@ -1,5 +1,3 @@
-use string_transformer::{/* TODO: Complete use declaration */};
-
 fn main() {
     let output = transformer(vec![
         ("hello".into(), Command::Uppercase),

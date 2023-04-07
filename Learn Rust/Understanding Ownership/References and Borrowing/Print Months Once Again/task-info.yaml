@@ -12,9 +12,9 @@ files:
       offset: 235
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: ZIVbShUV4nUKWW7m0P6nRA==
-  - offset: 417
+  - offset: 422
     length: 22
     placeholder_text: "mut months: [&str; 12]"
     initial_state:
@@ -22,7 +22,7 @@ files:
       offset: 417
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: jcmDLWYCUkaWT3hYU/VfYAEuOBRGp0icfAtPSSZIVPw=
   learner_created: false
 - name: Cargo.toml
@@ -33,5 +33,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+References+and+Borrowing+/+Print+Months+Once+Again
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 29 Mar 2023 14:32:16 UTC"
 record: -1

@@ -5,14 +5,14 @@ files:
   visible: true
   placeholders:
   - offset: 16
-    length: 34
+    length: 26
     placeholder_text: // put your code here to launch it
     initial_state:
       length: 34
       offset: 16
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: Ru/F09ZLSjpRk8JyOzlg3zy/K9iooZ3oix6M1X32A/s=
   learner_created: false
 - name: Cargo.toml
@@ -23,5 +23,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Introduction+/+Getting+started+/+Hello+World
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 05 Mar 2023 05:18:31 UTC"
 record: -1

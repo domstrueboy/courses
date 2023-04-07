@@ -13,16 +13,19 @@ files:
   visible: true
   placeholders:
   - offset: 24
-    length: 10
+    length: 9
     placeholder_text: /* TODO */
     initial_state:
       length: 10
       offset: 24
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 9sNYkhdWX+a+VGmmRvmBfAgnkwRT3l7I5gC4+W41G2dHhTdtfe3Up7wQFvjhUrEhht1ZF8iCUpD91VIcGIuBdA==
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Tuples+and+Arrays+/+Create+an+Array
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 11 Mar 2023 04:06:36 UTC"
 record: -1

@@ -10,7 +10,7 @@ fn main() {
     println!("{} is `{}`", "hello1", hello1);
 }
 
-fn add_exclamation(/*TODO*/ s: String) -> String {
+fn add_exclamation(mut s: String) -> String {
     s.push_str("!");
     s
 }

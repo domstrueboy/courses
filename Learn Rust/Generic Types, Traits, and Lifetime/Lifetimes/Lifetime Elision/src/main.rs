@@ -15,7 +15,6 @@ fn first_word(s: &str) -> &str {
 // The actual signature
 //fn first_word<'a>(s: &'a str) -> &'a str { ... }
 
-
 fn main() {
     // put you code here to launch it
 }

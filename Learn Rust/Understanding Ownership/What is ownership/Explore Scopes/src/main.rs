@@ -6,15 +6,15 @@ fn main() {
         {
             let d = 3;
             let e = 4;
-            println!("TODO")
+            println!("de")
         }
         let f = 5;
         {
             let g = 6;
-            println!("TODO")
+            println!("g")
         }
         let h = 7;
-        println!("TODO")
+        println!("bcfh")
     }
     let i = 8;
     println!("ai")

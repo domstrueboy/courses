@@ -1,8 +1,8 @@
 /* You may need to use something */
 
-#[derive(Debug,Default)]
+#[derive(Debug, Default)]
 pub struct Lamp {
-    on: bool
+    on: bool,
 }
 
 impl Lamp {

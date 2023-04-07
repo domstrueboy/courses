@@ -5,9 +5,7 @@ fn main() {
 
     let smaller_than_cap: Vec<_> = elements
         .iter()
-        .filter(|&&a| {
-            /* Complete the closure here */
-        })
+        .filter(|&&a| { /* Complete the closure here */ })
         .collect();
 
     println!("{:?}", smaller_than_cap);

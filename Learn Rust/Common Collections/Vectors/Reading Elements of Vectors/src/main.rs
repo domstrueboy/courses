@@ -13,5 +13,4 @@ fn main() {
 
     let does_not_exist1 = &v[100]; // PANIC!!!
     let does_not_exist2 = v.get(100); // No panic
-
 }

@@ -1,7 +1,6 @@
-use std::collections::HashMap;
 use modifying_a_hashmap::*;
 use std::collections::hash_map::RandomState;
-
+use std::collections::HashMap;
 
 fn main() {
     fn get_fruit_basket() -> HashMap<modifying_a_hashmap::Fruit, u32, RandomState> {
@@ -15,8 +14,4 @@ fn main() {
     let mut basket = get_fruit_basket();
     fruit_basket(&mut basket);
     println!("Basket: {:?}", basket);
-
 }
-
-
-

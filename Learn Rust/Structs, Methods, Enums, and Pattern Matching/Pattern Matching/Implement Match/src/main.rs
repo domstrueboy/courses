@@ -45,12 +45,11 @@ fn test_match_message_call() -> State {
     };
     state.process(Message::ChangeColor(255, 0, 255));
     state.process(Message::Echo(String::from("hello world")));
-    state.process(Message::Move{ x: 10, y: 15 });
+    state.process(Message::Move { x: 10, y: 15 });
     state.process(Message::Quit);
 
-    return state
+    return state;
 }
-
 
 fn main() {
     let state = test_match_message_call();

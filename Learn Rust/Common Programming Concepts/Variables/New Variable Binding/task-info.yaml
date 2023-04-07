@@ -9,19 +9,22 @@ files:
   visible: true
   placeholders:
   - offset: 16
-    length: 7
+    length: 3
     placeholder_text: '//TODO:'
     initial_state:
       length: 7
       offset: 16
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 0iV8NCCPfPrcuz8qxwUXSg==
   learner_created: false
 - name: tests/tests.rs
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+New+Variable+Binding
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 13:57:07 UTC"
 record: -1

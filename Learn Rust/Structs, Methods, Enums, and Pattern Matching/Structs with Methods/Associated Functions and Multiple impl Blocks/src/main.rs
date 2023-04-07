@@ -29,7 +29,7 @@ impl Rectangle {
 }
 
 fn main() {
-                          // Calling an associated function
+    // Calling an associated function
     let rect1 = Rectangle::square(50);
     let rect2 = Rectangle {
         width: 10,

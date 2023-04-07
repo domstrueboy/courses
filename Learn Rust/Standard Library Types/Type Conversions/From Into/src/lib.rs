@@ -13,10 +13,8 @@ impl Default for Person {
     }
 }
 
-
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
         // Write your code here
     }
 }
-

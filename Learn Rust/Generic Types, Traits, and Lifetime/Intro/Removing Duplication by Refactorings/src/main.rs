@@ -23,4 +23,3 @@ fn main() {
 
     println!("The largest number is {}", largest);
 }
-

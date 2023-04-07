@@ -4,16 +4,16 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 528
-    length: 74
+  - offset: 507
+    length: 106
     placeholder_text: "// TODO: Create your own order using the update syntax and\
       \ template above!"
     initial_state:
       length: 74
       offset: 528
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: JaPro5z/BIH12FzdDhvIoM38GmTM9UIXeIJfw5jjsIX/eahJXpeyoOSCLPC6YiT8Z+5KA/nvChzDeR9VDuoYBg8/Q0t7vVOdaQNxhSXSSJKTu15rgEg4y/XR9BpjVnG7rsjWKBVAE0J6af3vanLQmg==
   learner_created: false
 - name: Cargo.toml
@@ -25,5 +25,8 @@ files:
   encrypted_text: zgswXnSD/JyWUmOaKbKDaQ1yNAQgcXL3LHweGhwJT4dRqlDWFiQ8J9GxpInsDXycyrDQrj1a3z/4yxGtncb9FsZADsW6+ZDH2JQpSIqsIfKl7iEmRN2HN1KuXmBW62QVIsIGKwVuzDTGPSMJ8Z7LuEeKCcnWTiu5P04/xcaFxUul7N8syX88hitTI8HjJTAH
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Structs+/+Struct+Update
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 06 Apr 2023 19:06:00 UTC"
 record: -1

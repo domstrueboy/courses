@@ -9,7 +9,7 @@ fn main() {
         println!("Not quite what I was expecting... I see: {:?}", nice_slice);
     }
 
-    println!("1 has type placeholder type");
-    println!("1..4 has type placeholder type");
-    println!("nice_slice == [2, 3, 4] has type placeholder type");
+    println!("1 has i32 type");
+    println!("1..4 has Range<usize> type");
+    println!("nice_slice == [2, 3, 4] has bool type");
 }

@@ -1,5 +1,5 @@
-use try_from_into::*;
 use std::convert::{TryFrom, TryInto};
+use try_from_into::*;
 
 #[test]
 fn test_tuple_out_of_range_positive() {

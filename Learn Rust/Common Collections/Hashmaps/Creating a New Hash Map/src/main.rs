@@ -10,11 +10,9 @@ fn main() {
     println!("{:?}", scores1);
 
     // Creating a hash map from a list of teams and a list of scores
-    let teams = vec![String::from("Blue"),
-                                 String::from("Yellow")];
+    let teams = vec![String::from("Blue"), String::from("Yellow")];
     let initial_scores = vec![10, 50];
-    let scores2: HashMap<_, _> =
-        teams.into_iter().zip(initial_scores.into_iter()).collect();
+    let scores2: HashMap<_, _> = teams.into_iter().zip(initial_scores.into_iter()).collect();
 
     println!("{:?}", scores2);
 }

@@ -6,4 +6,3 @@ fn main() {
     println!("Array: {:?}", a);
     println!("Vector: {:?}", v);
 }
-

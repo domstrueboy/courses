@@ -1,4 +1,4 @@
-const NUMBER/* Something wrong with this constant! */= 3;
+const NUMBER: i32= 3;
 fn main() {
     println!("Number {}", NUMBER);
 }

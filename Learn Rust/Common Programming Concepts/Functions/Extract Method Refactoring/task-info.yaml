@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 196
+    length: 244
     placeholder_text: |-
       fn main() {
           let year1993 = 1993;
@@ -18,8 +18,8 @@ files:
       length: 196
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: sl3O59VlDkdl7u9JaiP8DJMHJ0iZM7BngxGrQupgxpTr1IekC3WbmWPeseholKh/SpOT/l0xW9psFqxmLlKWVmegBvWZHIVdaEilqf3aLtIDo2NCgLeqLo3+pEtWr31Hjrjsj8hyCrBj2Ekjo6cqWi8b2Rr2taFOp3wLMZHZJTJt/c8tlfOcV7r4JlF0qIYny+9uNeZEbJPnUAtlxETa6dExb7NPyjWXsMH7iAQsheL8hTV2Q9slk2A6jmduKtZdMt1HkcwhROCvo6ElEbITRfkYJ5U84Bk66HdahqneeOAo3uqiyDdeXpTQHblqXhXWeuoyoSM1kyVtMtSg0cPqXA==
   learner_created: false
 - name: Cargo.toml
@@ -30,5 +30,7 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Functions+/+Extract+Method+Refactoring
-status: Unchecked
+status: Solved
+feedback:
+  time: "Wed, 08 Mar 2023 14:49:35 UTC"
 record: -1

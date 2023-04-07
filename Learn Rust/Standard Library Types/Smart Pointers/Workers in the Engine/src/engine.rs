@@ -3,14 +3,14 @@ use crate::worker::Worker;
 
 pub struct Engine {
     log: Vec<String>,
-    workers: Vec<Worker>
+    workers: Vec<Worker>,
 }
 
 impl Engine {
     pub fn new() -> Self {
         Engine {
             log: vec![],
-            workers: vec![]
+            workers: vec![],
         }
     }
 

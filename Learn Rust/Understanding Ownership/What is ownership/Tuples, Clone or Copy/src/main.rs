@@ -6,7 +6,7 @@ fn main() {
     println!("{:?}", adam_info_copy);
 
     let eva_info = (18, String::from("Eva"));
-    let eva_info_copy = eva_info/* TODO */;  // (**)
+    let eva_info_copy = eva_info.clone(); // (**)
 
     println!("{:?}", eva_info);
     println!("{:?}", eva_info_copy);

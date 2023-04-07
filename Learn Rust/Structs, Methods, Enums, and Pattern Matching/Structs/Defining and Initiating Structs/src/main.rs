@@ -24,8 +24,7 @@ fn main() {
 
     user1.email = String::from("anotheremail@example.com");
 
-    let user2 = build_user("anyone@example.com".to_string(),
-                              "anyone".to_string());
+    let user2 = build_user("anyone@example.com".to_string(), "anyone".to_string());
 
     println!("{}", user2.username);
 }

@@ -5,14 +5,14 @@ files:
   visible: true
   placeholders:
   - offset: 40
-    length: 7
+    length: 15
     placeholder_text: 3.14f32
     initial_state:
       length: 7
       offset: 40
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: UY5DzYuvpAnfcOxjVc8E4g==
   learner_created: false
 - name: Cargo.toml
@@ -20,5 +20,7 @@ files:
   encrypted_text: m9XZNRB4SP+Ysnl4An4VfEce3DNJ+Gmjo+c70g24fQ6+zuWmnQcsHOJeswOI6AXazvL5twuXz9nP3RcmPkONQy/g8fJ/I6YWMeL0jiqV+3kJUzuF/RRY0gvkFiYp9A0s
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Use+Clippy+as+External+Linter
-status: Unchecked
+status: Solved
+feedback:
+  time: "Wed, 08 Mar 2023 14:26:46 UTC"
 record: -1

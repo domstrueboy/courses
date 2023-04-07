@@ -74,7 +74,3 @@ impl FromStr for Climate {
         Ok(Climate { city, year, temp })
     }
 }
-
-
-
-

@@ -39,5 +39,3 @@ impl TryFrom<&[i16]> for Color {
         // Write your code here
     }
 }
-
-

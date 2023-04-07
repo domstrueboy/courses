@@ -4,7 +4,3 @@ fn main() {
     let b = fruit_basket();
     println!("Basket: {:?}", b);
 }
-
-
-
-

@@ -20,11 +20,16 @@ pub fn notify4(item: &(impl Summary + Display)) {}
 pub fn notify5<T: Summary + Display>(item: &T) {}
 
 // Clearer Trait Bounds with where Clauses
-fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 { 0 }
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
+    0
+}
 fn some_function2<T, U>(t: &T, u: &U) -> i32
-    where T: Display + Clone,
-          U: Clone + Debug
-{ 0 }
+where
+    T: Display + Clone,
+    U: Clone + Debug,
+{
+    0
+}
 
 fn main() {
     // put you code here to launch it

@@ -9,19 +9,22 @@ files:
   visible: true
   placeholders:
   - offset: 21
-    length: 31
+    length: 5
     placeholder_text: /*insert here missing part(s)*/
     initial_state:
       length: 31
       offset: 21
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: c7PuLZhDhQrD0om4JOPwxw==
   learner_created: false
 - name: tests/tests.rs
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Variable+Type
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 14:06:49 UTC"
 record: -1

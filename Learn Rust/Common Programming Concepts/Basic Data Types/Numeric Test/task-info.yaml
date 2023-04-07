@@ -9,24 +9,24 @@ files:
   visible: true
   placeholders:
   - offset: 43
-    length: 8
+    length: 1
     placeholder_text: /*TODO*/
     initial_state:
       length: 8
       offset: 43
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: T8AiSMXdLBzRojlDnyN8kw==
-  - offset: 101
-    length: 8
+  - offset: 94
+    length: 1
     placeholder_text: /*TODO*/
     initial_state:
       length: 8
       offset: 101
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: T8AiSMXdLBzRojlDnyN8kw==
   learner_created: false
 - name: Cargo.toml
@@ -34,5 +34,8 @@ files:
   encrypted_text: m9XZNRB4SP+Ysnl4An4VfDbmwSoWOmNJu0K/xIYV7la4Tc/ZuHLTyF4uZYWBDUzB8jW4PHKTfQSGFCdCddLgazptWHalxpgJE89LgbwOANs=
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Numeric+Test
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 14:16:43 UTC"
 record: -1

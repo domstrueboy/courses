@@ -1,8 +1,6 @@
 fn main() {
 
-    let hello = String::from("Hello");
-
-    let mut hello1 = with_exclamation(hello);
+    let mut hello1 = with_exclamation();
 
     println!("{} is `{}`", "hello1", hello1);
 
@@ -11,8 +9,8 @@ fn main() {
     println!("{} is `{}`", "hello1", hello1);
 }
 
-fn with_exclamation(s: String) -> String {
-    /* Create the "Hello" string here */
+fn with_exclamation() -> String {
+    let mut str = String::from("Hello");
     str.push_str("!");
     str
 }

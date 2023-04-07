@@ -4,7 +4,6 @@ pub enum List {
     Nil,
 }
 
-
 pub fn create_empty_list() -> List {
     unimplemented!()
 }
@@ -12,4 +11,3 @@ pub fn create_empty_list() -> List {
 pub fn create_non_empty_list() -> List {
     unimplemented!()
 }
-

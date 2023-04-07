@@ -9,20 +9,23 @@ files:
   visible: true
   placeholders:
   - offset: 109
-    length: 70
+    length: 19
     placeholder_text: // Finish the rest of this line like the example! Or make it
       be false!
     initial_state:
       length: 70
       offset: 109
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 2+7POt4eiymUghlNx50j/EMpKvYr/2BnYLc9sp6FeNI=
   learner_created: false
 - name: tests/tests.rs
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Boolean+Test
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 14:20:11 UTC"
 record: -1

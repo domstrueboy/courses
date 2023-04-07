@@ -9,19 +9,22 @@ files:
   visible: true
   placeholders:
   - offset: 24
-    length: 4
+    length: 1
     placeholder_text: TODO
     initial_state:
       length: 4
       offset: 24
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: MLcncFemOCq1pOmRWXqSfg==
   learner_created: false
 - name: tests/tests.rs
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Functions+/+Passing+an+Argument
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Mar 2023 14:35:56 UTC"
 record: -1

@@ -5,8 +5,3 @@ fn main() {
     let ans = vec_loop(v.clone());
     println!("Vector: {:?}", ans);
 }
-
-
-
-
-

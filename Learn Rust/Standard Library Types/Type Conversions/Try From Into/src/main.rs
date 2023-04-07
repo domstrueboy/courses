@@ -1,5 +1,5 @@
-use try_from_into::*;
 use std::convert::{TryFrom, TryInto};
+use try_from_into::*;
 
 fn main() {
     // Use the `from` function

@@ -2,7 +2,7 @@
 
 pub struct Worker {
     id: usize,
-    log: &Vec<String>
+    log: &Vec<String>,
 }
 
 impl Worker {

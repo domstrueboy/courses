@@ -6,8 +6,10 @@ fn main() {
     println!("The longest string is {}", result);
 }
 
-fn longest(x: &str, y: &str) -> &str { // !!! ERROR:
-    if x.len() > y.len() {             // missing lifetime specifier
+fn longest(x: &str, y: &str) -> &str {
+    // !!! ERROR:
+    if x.len() > y.len() {
+        // missing lifetime specifier
         x
     } else {
         y

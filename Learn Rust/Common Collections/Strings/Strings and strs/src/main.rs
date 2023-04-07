@@ -1,6 +1,10 @@
-fn string_slice(arg: &str) { println!("{}", arg); }
+fn string_slice(arg: &str) {
+    println!("{}", arg);
+}
 
-fn string(arg: String) { println!("{}", arg); }
+fn string(arg: String) {
+    println!("{}", arg);
+}
 
 fn main() {
     TODO("blue");
