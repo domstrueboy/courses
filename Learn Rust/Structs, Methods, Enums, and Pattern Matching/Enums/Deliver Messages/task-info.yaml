@@ -5,14 +5,14 @@ files:
   visible: true
   placeholders:
   - offset: 36
-    length: 47
+    length: 42
     placeholder_text: // Define a few types of messages as used below
     initial_state:
       length: 47
       offset: 36
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: q/BCLu3BsoQjwKCicRF0owC9OJngOU9dubUXXu2C1qhcBaAl/wXT+ZwPlSKqiSTI
   learner_created: false
 - name: Cargo.toml
@@ -23,5 +23,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Enums+/+Deliver+Messages
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 11 Apr 2023 16:18:24 UTC"
 record: -1

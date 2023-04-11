@@ -5,14 +5,14 @@ files:
   visible: true
   placeholders:
   - offset: 36
-    length: 43
+    length: 81
     placeholder_text: // Define the different variants used below
     initial_state:
       length: 43
       offset: 36
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: zbTynzjw1TbUDdnWfTMie+1CcWUpKAr5RBqqHvkqcHWHG6O72jC1AoBQSuwgC/2mGLSaGNVzjQ9gjs6tGjQX+ppdfCo9AHvIybGLUPXxaPBe2H+43/U2s/JQupOVsGy+
   learner_created: false
 - name: Cargo.toml
@@ -23,5 +23,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Enums+/+Deliver+Complex+Messages
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 11 Apr 2023 18:11:07 UTC"
 record: -1
