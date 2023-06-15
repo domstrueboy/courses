@@ -16,24 +16,24 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 29
+    length: 91
     placeholder_text: /* Add use statements here */
     initial_state:
       length: 29
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: Cy55l4A5Hl+I7c8CzfSSn8zUzR2MMfJAd+1jyDbOvRELM+RQBhdd6pUmvewzLCmlH3Yx5OsbiOsollDa88XCQ6/L/RTchIfeeD0MTS95QCrokpefZYpMeji6RF0Ioxydeu2prYHLlaGHbGhHQQGX8mAAwY5uRuNWcxTULr6W29HSVW0eL5CBzqZ0IsjF6ovt/XjWXKsE249+dT0QT7C9pQsyMHpX1Aso/uy6fHE4nKA=
-  - offset: 137
-    length: 30
+  - offset: 251
+    length: 43
     placeholder_text: /* What's Alice doing here? */
     initial_state:
       length: 30
       offset: 137
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 44q96sd5Yzk1SxMEbCvqlPtgE9fqkpFVLMcRzrq0/cSqHMsQdDss9cGpD0OZ1DGL
   learner_created: false
 - name: src/ground_floor/big_hall.rs
@@ -64,14 +64,14 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 9
+    length: 3
     placeholder_text: /* ??? */
     initial_state:
       length: 9
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: Ek5n1xVO6F+uh3wYJynyng==
   learner_created: false
 - name: src/ground_floor.rs
@@ -84,5 +84,8 @@ files:
   visible: true
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Home+Alone+at+Day+X
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 17 Apr 2023 03:59:41 UTC"
 record: -1

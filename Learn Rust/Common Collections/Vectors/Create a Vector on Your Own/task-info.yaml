@@ -5,24 +5,24 @@ files:
   visible: true
   placeholders:
   - offset: 118
-    length: 10
+    length: 13
     placeholder_text: /* TODO */
     initial_state:
       length: 10
       offset: 118
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: FJ8S1FxPC8dh+Isw6daPCw==
-  - offset: 143
-    length: 10
+  - offset: 146
+    length: 20
     placeholder_text: /* TODO */
     initial_state:
       length: 10
       offset: 143
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: ljYg80GtwiD8wzlesR2aYGVecsZHzoM8X2e2D9xfP/I=
   learner_created: false
 - name: src/main.rs
@@ -36,5 +36,8 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Vectors+/+Create+a+Vector+on+Your+Own
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 17 Apr 2023 14:50:51 UTC"
 record: -1

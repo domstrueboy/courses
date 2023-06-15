@@ -13,9 +13,11 @@ pub struct CellsCounter {
 
 pub fn count_cells(vec: &Vec<SpreadsheetCell>) -> CellsCounter {
     let mut cc = CellsCounter {ints: 0, floats: 0, texts: 0};
-    for v in /* TODO */ {
+    for v in vec {
         match v {
-            /* Add match cases */
+            SpreadsheetCell::Int(v) => cc.ints+=1,
+            SpreadsheetCell::Float(v) => cc.floats+=1,
+            SpreadsheetCell::Text(v) => cc.texts+=1,
         }
     }
     cc
